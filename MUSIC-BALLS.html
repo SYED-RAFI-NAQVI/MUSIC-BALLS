@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="MUSIC-BALLS.css">
+<!-- Load the Paper.js library -->
+<script type="text/javascript" src="paper-full.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.9/howler.js"></script>
+<link rel="stylesheet" href="rafi.css">
+<!-- Define inlined PaperScript associate it with myCanvas -->
+<script type="text/paperscript" canvas="myCanvas">
+
+var sound_a = new Howl({
+  src: ['sounds/a.mp3']
+});
+var sound_b = new Howl({
+  src: ['sounds/b.mp3']
+});
+var sound_c = new Howl({
+  src: ['sounds/c.mp3']
+});
+var sound_d = new Howl({
+  src: ['sounds/d.mp3']
+});
+var sound_e = new Howl({
+  src: ['sounds/e.mp3']
+});
+var sound_f = new Howl({
+  src: ['sounds/f.mp3']
+});
+var sound_g = new Howl({
+  src: ['sounds/g.mp3']
+});
+var sound_h = new Howl({
+  src: ['sounds/h.mp3']
+});
+var sound_i = new Howl({
+  src: ['sounds/i.mp3']
+});
+var sound_j = new Howl({
+  src: ['sounds/j.mp3']
+});
+var sound_k = new Howl({
+  src: ['sounds/k.mp3']
+});
+var sound_l = new Howl({
+  src: ['sounds/l.mp3']
+});
+var sound_m = new Howl({
+  src: ['sounds/m.mp3']
+});
+var sound_n = new Howl({
+  src: ['sounds/n.mp3']
+});
+var sound_o = new Howl({
+  src: ['sounds/o.mp3']
+});
+var sound_p = new Howl({
+  src: ['sounds/p.mp3']
+});
+var sound_q = new Howl({
+  src: ['sounds/q.mp3']
+});
+var sound_r = new Howl({
+  src: ['sounds/r.mp3']
+});
+var sound_s = new Howl({
+  src: ['sounds/s.mp3']
+});
+var sound_t = new Howl({
+  src: ['sounds/t.mp3']
+});
+var sound_u = new Howl({
+  src: ['sounds/u.mp3']
+});
+var sound_v = new Howl({
+  src: ['sounds/v.mp3']
+});
+var sound_w = new Howl({
+  src: ['sounds/w.mp3']
+});
+var sound_x = new Howl({
+  src: ['sounds/y.mp3']
+});
+var sound_y = new Howl({
+  src: ['sounds/x.mp3']
+});
+var sound_z = new Howl({
+  src: ['sounds/z.mp3']
+});
+
+
+
+var circles = [];
+
+function onKeyDown(event) {
+		var maxpoint = new Point(view.size.width, view.size.height);
+		var randompoint = Point.random();
+		var point = maxpoint * randompoint;
+		var cir = new Path.Circle(point, 600);
+		cir.fillColor = "green";
+		circles.push(cir);
+
+
+		if (event.key === "a") {
+			sound_a.play();
+			cir.fillColor = '#1abc9c';
+		}	if (event.key === "b") {
+			cir.fillColor = '#2ecc71'
+			sound_b.play();
+		}	if (event.key === "c") {
+			cir.fillColor = '#3498db'
+			sound_c.play();
+		} if (event.key === "d") {
+			cir.fillColor = '#9b59b6'
+			sound_d.play();
+		}	if (event.key === "e") {
+			cir.fillColor = '#34495e'
+			sound_e.play();
+		}	if (event.key === "f") {
+			cir.fillColor = '#16a085'
+			sound_f.play();
+		}	if (event.key === "g") {
+			cir.fillColor = '#27ae60'
+			sound_g.play();
+		} if (event.key === "h") {
+			cir.fillColor = '#2980b9'
+			sound_h.play();
+		}	if (event.key === "i") {
+			cir.fillColor = '#8e44ad'
+			sound_i.play();
+		}	if (event.key === "j") {
+			cir.fillColor = '#2c3e50'
+	 		sound_j.play();
+		} if (event.key === "k") {
+			cir.fillColor = '#f1c40f'
+			sound_k.play();
+		}if (event.key === "l") {
+			cir.fillColor = '#e67e22'
+			sound_l.play();
+		}if (event.key === "m") {
+			cir.fillColor = '#e74c3c'
+			sound_m.play();
+		}if (event.key === "n") {
+			cir.fillColor = '#95a5a6'
+			sound_n.play();
+		}if (event.key === "o") {
+			cir.fillColor = '#f39c12'
+			sound_o.play();
+		}if (event.key === "p") {
+			cir.fillColor = '#d35400'
+			sound_p.play();
+		}if (event.key === "q") {
+			cir.fillColor = '#1abc9c'
+			sound_q.play();
+		}if (event.key === "r") {
+			cir.fillColor = '#2ecc71'
+			sound_r.play();
+		}if (event.key === "s") {
+			cir.fillColor = '#3498db'
+			sound_s.play();
+		}if (event.key === "t") {
+			cir.fillColor = '#9b59b6'
+			sound_t.play();
+		}if (event.key === "u") {
+			cir.fillColor = '#34495e'
+			sound_u.play();
+		}if (event.key === "v") {
+			cir.fillColor = '#16a085'
+			sound_v.play();
+		}if (event.key === "w") {
+			cir.fillColor = '#27ae60'
+			sound_w.play();
+		}if (event.key === "x") {
+			cir.fillColor = '#2980b9'
+			sound_x.play();
+		}if (event.key === "y") {
+			cir.fillColor = '#8e44ad'
+			sound_y.play();
+		}if (event.key === "z") {
+			cir.fillColor = '#2c3e50'
+			sound_z.play();
+		}
+}
+
+function onFrame(event) {
+	for(var i = 0; i< circles.length; i++){
+	circles[i].fillColor.hue += 7;
+	circles[i].scale(.9);
+		if(circles[i].area < 1){
+				circles[i].remove();
+				circles.splice(i, 1);
+				console.log(circles);
+		}
+	}
+}
+
+
+</script>
+</head>
+<body>
+	<canvas id="myCanvas" resize></canvas>
+</body>
+</html>
